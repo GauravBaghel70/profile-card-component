@@ -1,0 +1,119 @@
+:root{
+     --Dark-cyan: hsl(185, 75%, 39%);
+     --Very-blue: hsl(229, 23%, 23%);
+     --Dark-grayish-blue: hsl(227, 10%, 46%);
+     
+     --Dark-gray: hsl(0, 0%, 59%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Dark-cyan);
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 40vh right 50vw, left 50vw top 50vh;
+}
+.main{
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.card{
+    max-width: 1000px;
+    height: 55vh;
+    display: grid;
+    grid-template-rows: 40% 1fr;
+    background-color: white;
+    margin: 30px 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 10px 50px 1px rgba(94, 93, 93, 0.826);
+}
+.down-content{
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+}
+.following{ 
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    grid-gap: 10px;
+    border-top: 1px solid hsl(0, 0%, 59%);;
+    
+}
+.about{
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px;
+
+}
+.name{
+    font-size: 23px;
+    color: var(--Very-blue);
+}
+.background-top {
+    image-orientation: inherit;
+}
+span{
+    font-size: 23px;
+    margin-left: 5px;
+    font-weight: 400;
+}
+.color{
+    color: var(--Dark-gray);
+}
+.location{
+    padding-top: 10px;
+}
+.count{
+   font-weight: bold; 
+   font-size: 21px;
+}
+.profile{
+    margin-top: -100%;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-color: white;
+}
+.follow{
+    margin-top: 5px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+@media only screen and (min-width:200px) and (max-width:600px){
+    body{
+        margin:0px;
+        align-items: center;
+
+    }
+    .main{
+        align-items: center;
+    }
+    .card{
+        min-width: 200px;
+        margin:6% ;
+    }
+    .profile{
+        margin-left: -10%;
+    }
+    .about{
+        margin-left: -10%;
+    }
+    .following{
+        margin-left: -10%;
+        padding: 10%;
+    }
+}
